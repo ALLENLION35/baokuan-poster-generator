@@ -84,9 +84,20 @@ No reference image is required. Describe the mood, audience and purpose instead.
 
 ## Examples
 
-These examples use fictional event and person details. Results depend on the copy, assets, assistant and revisions.
+These posters promote the 星辰AI增长 “GEO · A2A · FDE” open class. Supplied by the project maintainer, the showcase includes a nine-card overview and a complete long poster.
 
-![Three event cover examples](examples/real-runs.png)
+**Nine-card overview**
+
+[![GEO · A2A · FDE open class: nine-card overview](examples/event-geo-a2a-fde-grid.png)](examples/event-geo-a2a-fde-grid.png)
+
+<details>
+<summary>View the complete event long poster</summary>
+
+[![GEO · A2A · FDE open class: complete long poster](examples/event-geo-a2a-fde-long.jpg)](examples/event-geo-a2a-fde-long.jpg)
+
+</details>
+
+Click either image to open the original. Event details are shown in the posters; see [asset sources](ASSET_SOURCES.md) for provenance.
 
 <details>
 <summary>View six preset colour styles</summary>

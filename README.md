@@ -92,9 +92,20 @@ https://github.com/ALLENLION35/baokuan-poster-generator
 
 ## 效果示例
 
-以下为内置示例，活动与人物资料为虚构。实际效果取决于文案、素材、助手的排版与后续修改。
+以下展示星辰AI增长的「GEO · A2A · FDE：看清 AI 商业的变化」公开课活动海报，由项目维护者提供，包含九张组图总览和完整长图。
 
-![三种活动的示例封面](examples/real-runs.png)
+**九张组图总览**
+
+[![GEO · A2A · FDE 公开课活动：九张组图总览](examples/event-geo-a2a-fde-grid.png)](examples/event-geo-a2a-fde-grid.png)
+
+<details>
+<summary>展开查看完整活动长图</summary>
+
+[![GEO · A2A · FDE 公开课活动：完整长图](examples/event-geo-a2a-fde-long.jpg)](examples/event-geo-a2a-fde-long.jpg)
+
+</details>
+
+点击图片可打开原图。活动信息以海报标注为准；案例素材说明见[素材来源](ASSET_SOURCES.md)。
 
 <details>
 <summary>展开查看六种配色风格</summary>

@@ -16,7 +16,7 @@ assignees: ""
 
 ## 环境
 
-- 爆款海报生成器版本：
+- Hot Poster Generator版本：
 - 操作系统：
 - Node / Python 版本：
 - Chromium 版本或来源：

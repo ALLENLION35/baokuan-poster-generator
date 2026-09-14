@@ -1,8 +1,8 @@
 {
-  "name": "baokuan-poster-generator",
-  "version": "1.0.0",
+  "name": "hot-poster-generator",
+  "version": "1.0.1",
   "private": true,
-  "description": "爆款海报生成器｜星辰汇 · 星辰AI增长：将文案与素材制作成可修改的中文长图、单页海报和编号组图的 Agent Skill",
+  "description": "Hot Poster Generator｜星辰汇 · 星辰AI增长：将文案与素材制作成可修改的中文长图、单页海报和编号组图的 Agent Skill",
   "engines": {
     "node": ">=22"
   },
@@ -29,6 +29,6 @@
     "social-media",
     "xingchenhui",
     "xingchen-ai-growth",
-    "baokuan-poster"
+    "hot-poster"
   ]
 }

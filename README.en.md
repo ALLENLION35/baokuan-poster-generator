@@ -1,8 +1,8 @@
-# 爆款海报生成器 · Viral Poster Generator
+# Hot Poster Generator
 
 **Give your AI assistant the copy and assets. Get long posters, single posters or slide sets you can keep editing.**
 
-An open-source project by **星辰汇 · 星辰AI增长** · Author: allenlion · Version: 1.0 · [MIT](LICENSE) · [中文说明](README.md)
+An open-source project by **星辰汇 · 星辰AI增长** · Author: allenlion · Version: 1.0.1 · [MIT](LICENSE) · [中文说明](README.md)
 
 For course promotions, events, product introductions and community content. Install this skill in an AI assistant that can read and write files and run commands, then describe the result you want in ordinary language.
 
@@ -22,19 +22,19 @@ Nine-card posts require an explicit nine-page content plan. Cutting a single mas
 Send this to Codex, Claude Code or another assistant that can manage files and execute commands:
 
 ```text
-Install Viral Poster Generator (爆款海报生成器):
-https://github.com/ALLENLION35/baokuan-poster-generator
+Install Hot Poster Generator:
+https://github.com/ALLENLION35/hot-poster-generator
 
 Read the README and install the complete skill directory for this application.
 Check and prepare the export environment: Node.js 22+, Python 3, npm dependencies,
 Chromium and Chinese fonts. Reuse a suitable existing environment where available.
-Confirm that baokuan-poster-generator is discoverable, run the built-in demo,
+Confirm that hot-poster-generator is discoverable, run the built-in demo,
 and show me the image preview and output file locations.
 ```
 
 Installation is checked when the demo produces real poster and slide files. The first setup may download dependencies and a browser; time depends on your existing environment and network.
 
-[Download the full 1.0 skill package](https://github.com/ALLENLION35/baokuan-poster-generator/releases/download/v1.0.0/baokuan-poster-generator-1.0.0.zip) · [Release page](https://github.com/ALLENLION35/baokuan-poster-generator/releases/tag/v1.0.0)
+[Download the full 1.0.1 skill package](https://github.com/ALLENLION35/hot-poster-generator/releases/download/v1.0.1/hot-poster-generator-1.0.1.zip) · [Release page](https://github.com/ALLENLION35/hot-poster-generator/releases/tag/v1.0.1)
 
 A text-only chat cannot run the image exporter. Uploading only `SKILL.md` does not install the complete toolkit.
 
@@ -45,7 +45,7 @@ Open a new conversation after installation, attach your copy and assets, then tr
 **Long poster**
 
 ```text
-Use baokuan-poster-generator to make a Chinese long poster from the attached event copy.
+Use hot-poster-generator to make a Chinese long poster from the attached event copy.
 The audience is business owners. Keep the design simple and refined.
 Preserve the date, location, price and registration details. Deliver a JPG and editable source.
 ```
@@ -61,7 +61,7 @@ and place my supplied contact QR code at the bottom.
 **Nine-card post**
 
 ```text
-Use baokuan-poster-generator to organise this content into nine 1080×1440 cards.
+Use hot-poster-generator to organise this content into nine 1080×1440 cards.
 Start with a cover, give each middle card one topic, and end with a summary and my call to action.
 Keep the style consistent and preserve key facts. If the content is insufficient or too dense,
 explain the adjustment needed. Deliver numbered images, an overview and a ZIP.
@@ -115,7 +115,7 @@ The presets cover technology, minimal, festive, market, natural and business sty
 With Node.js 22+ and npm available, run:
 
 ```sh
-npx skills add ALLENLION35/baokuan-poster-generator --skill baokuan-poster-generator
+npx skills add ALLENLION35/hot-poster-generator --skill hot-poster-generator
 ```
 
 Choose your agent at the prompt. Installation is project-scoped by default; add `--global` for use across projects. See the [official skills CLI documentation](https://github.com/vercel-labs/skills).
@@ -124,7 +124,7 @@ This installs skill files, not the rendering dependencies. Ask the assistant to 
 
 ### From the ZIP
 
-Extract the release package to obtain `baokuan-poster-generator/`. Ask your assistant to install that complete folder or follow your host's skill-directory instructions. Keep all scripts, assets, themes, references and dependency manifests.
+Extract the release package to obtain `hot-poster-generator/`. Ask your assistant to install that complete folder or follow your host's skill-directory instructions. Keep all scripts, assets, themes, references and dependency manifests.
 
 If your application has a skill-import feature, follow its instructions. Importing the files does not guarantee that its environment can run the exporter; clients have not all been tested.
 
@@ -158,9 +158,9 @@ Node.js 22+, Python 3 and Chinese fonts are required. Open `outputs/demo/poster.
 ## Learn more and contribute
 
 - [Command-line guide](docs/CLI.en.md): themes, brand colours, HTML editing, page plans and export commands.
-- [Skill instructions](SKILL.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md) · [Report an issue](https://github.com/ALLENLION35/baokuan-poster-generator/issues)
+- [Skill instructions](SKILL.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md) · [Report an issue](https://github.com/ALLENLION35/hot-poster-generator/issues)
 
-Version 1.0 passed 35 tests locally on macOS and in [Ubuntu CI](https://github.com/ALLENLION35/baokuan-poster-generator/actions/runs/34823128808). This does not establish compatibility with every client or validate the visual quality of every input.
+Version 1.0 passed 35 tests locally on macOS and in [Ubuntu CI](https://github.com/ALLENLION35/hot-poster-generator/actions/runs/34823128808). This does not establish compatibility with every client or validate the visual quality of every input.
 
 [MIT License](LICENSE) · [Asset sources](ASSET_SOURCES.md) · [Third-party notices](THIRD_PARTY_NOTICES.md) · [Security policy](SECURITY.md)
 
@@ -168,7 +168,7 @@ Version 1.0 passed 35 tests locally on macOS and in [Ubuntu CI](https://github.c
 
 **星辰汇 · 星辰AI增长 — Poster creation and AI growth community**
 
-Share your work, ask questions and suggest improvements. Scan the QR code to add the maintainer on WeChat and request a group invitation. Mention “爆款海报生成器” when adding the contact.
+Share your work, ask questions and suggest improvements. Scan the QR code to add the maintainer on WeChat and request a group invitation. Mention “Hot Poster Generator” when adding the contact.
 
 <img src="assets/feedback-wechat-qr.jpg" alt="星辰汇 and 星辰AI增长: add the maintainer on WeChat to request a group invitation" width="320" />
 

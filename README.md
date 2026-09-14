@@ -1,8 +1,8 @@
-# 爆款海报生成器
+# Hot Poster Generator
 
 **把文案和素材交给 AI，制作长图海报、单页海报和多张组图，还能接着改。**
 
-星辰汇 · 星辰AI增长 开源项目 · 作者：allenlion · 版本：1.0 · [MIT 许可证](LICENSE) · [English](README.en.md)
+星辰汇 · 星辰AI增长 开源项目 · 作者：allenlion · 版本：1.0.1 · [MIT 许可证](LICENSE) · [English](README.en.md)
 
 适合做课程招生、活动报名、产品介绍、社群招募和内容分享。安装到支持技能的 AI 助手后，用日常语言说明需求、提供素材，由助手组织内容、排版并导出图片。
 
@@ -24,18 +24,18 @@
 **推荐：把下面这段话直接发给 Codex、Claude Code 等能读写文件、运行命令的 AI 助手。**
 
 ```text
-帮我安装「爆款海报生成器」：
-https://github.com/ALLENLION35/baokuan-poster-generator
+帮我安装「Hot Poster Generator」：
+https://github.com/ALLENLION35/hot-poster-generator
 
 请阅读 README，按当前应用支持的方式安装完整技能目录。
 同时检查并准备图片导出环境：Node.js 22+、Python 3、npm 依赖、Chromium 和中文字体；已有可用环境就复用。
-安装后确认能找到 baokuan-poster-generator，并运行内置示例，给我图片预览和文件位置。
+安装后确认能找到 hot-poster-generator，并运行内置示例，给我图片预览和文件位置。
 ```
 
 看到示例长图和组图文件，才算完成了从安装到导出的检查。首次准备可能需要下载运行依赖和浏览器，耗时取决于网络与现有环境。
 
-- [下载 1.0 完整技能包](https://github.com/ALLENLION35/baokuan-poster-generator/releases/download/v1.0.0/baokuan-poster-generator-1.0.0.zip)
-- [查看 1.0 发布页](https://github.com/ALLENLION35/baokuan-poster-generator/releases/tag/v1.0.0)
+- [下载 1.0.1 完整技能包](https://github.com/ALLENLION35/hot-poster-generator/releases/download/v1.0.1/hot-poster-generator-1.0.1.zip)
+- [查看 1.0.1 发布页](https://github.com/ALLENLION35/hot-poster-generator/releases/tag/v1.0.1)
 
 只有文字聊天能力的应用无法运行本项目的图片导出脚本。请使用能执行命令、保存文件的环境；只上传 `SKILL.md` 不等于安装完整工具。
 
@@ -46,7 +46,7 @@ https://github.com/ALLENLION35/baokuan-poster-generator
 ### 做一张长图
 
 ```text
-使用爆款海报生成器，把附件里的活动文案做成公众号长图。
+使用Hot Poster Generator，把附件里的活动文案做成公众号长图。
 目标人群是企业负责人，整体简洁、有质感。
 时间、地点、价格和报名方式都要保留，交付 JPG 和可修改源稿。
 ```
@@ -54,14 +54,14 @@ https://github.com/ALLENLION35/baokuan-poster-generator
 ### 做一张单页海报
 
 ```text
-使用爆款海报生成器，用附件里的文案、Logo 和产品图，做一张 3:4 朋友圈海报。
+使用Hot Poster Generator，用附件里的文案、Logo 和产品图，做一张 3:4 朋友圈海报。
 整体跟 Logo 的配色走，突出产品卖点和价格，底部放我提供的咨询二维码。
 ```
 
 ### 做 9 张内容组图
 
 ```text
-使用爆款海报生成器，把这份内容整理成 9 张组图，每张 1080×1440。
+使用Hot Poster Generator，把这份内容整理成 9 张组图，每张 1080×1440。
 第一页是封面，中间每页讲清一个主题，最后一页放总结和我提供的行动信息。
 保持整组风格统一，保留关键事实；如果内容不足或太多，请说明怎样调整。
 交付编号图片、总览和 ZIP。
@@ -125,7 +125,7 @@ https://github.com/ALLENLION35/baokuan-poster-generator
 先准备 Node.js 22+ 和 npm，在终端执行：
 
 ```sh
-npx skills add ALLENLION35/baokuan-poster-generator --skill baokuan-poster-generator
+npx skills add ALLENLION35/hot-poster-generator --skill hot-poster-generator
 ```
 
 按提示选择目标 Agent。默认安装到当前项目；需要在多个项目中使用时，加 `--global`。参数说明见 [skills CLI 官方文档](https://github.com/vercel-labs/skills)。
@@ -134,7 +134,7 @@ npx skills add ALLENLION35/baokuan-poster-generator --skill baokuan-poster-gener
 
 ### 方式二：下载 ZIP 安装
 
-下载上面的完整技能包，解压后得到 `baokuan-poster-generator/`。将整个目录交给助手安装，或按宿主的技能目录规则放置。保留 `SKILL.md`、`scripts/`、`assets/`、`themes/`、`references/` 和依赖清单等完整文件。
+下载上面的完整技能包，解压后得到 `hot-poster-generator/`。将整个目录交给助手安装，或按宿主的技能目录规则放置。保留 `SKILL.md`、`scripts/`、`assets/`、`themes/`、`references/` 和依赖清单等完整文件。
 
 若应用提供技能包导入入口，可按该应用说明导入；是否能运行图片导出，仍取决于它是否支持所需运行环境。不同客户端尚未逐一验证。
 
@@ -177,9 +177,9 @@ python3 scripts/pack.py outputs/demo
 
 - [命令行制作指南](docs/CLI.zh-CN.md)：主题、Logo 取色、源稿修改、分页方案和导出命令。
 - [Skill 工作规则](SKILL.md)：助手怎样组织内容、选风格和交付。
-- [版本记录](CHANGELOG.md) · [后续计划](ROADMAP.md) · [参与贡献](CONTRIBUTING.md) · [反馈问题](https://github.com/ALLENLION35/baokuan-poster-generator/issues)
+- [版本记录](CHANGELOG.md) · [后续计划](ROADMAP.md) · [参与贡献](CONTRIBUTING.md) · [反馈问题](https://github.com/ALLENLION35/hot-poster-generator/issues)
 
-1.0 已通过 macOS 本地与 [Ubuntu 云端的 35 项测试](https://github.com/ALLENLION35/baokuan-poster-generator/actions/runs/34823128808)。测试覆盖渲染、配色和底图管理，不代表每个客户端、每种文案的效果都已验证。
+1.0 已通过 macOS 本地与 [Ubuntu 云端的 35 项测试](https://github.com/ALLENLION35/hot-poster-generator/actions/runs/34823128808)。测试覆盖渲染、配色和底图管理，不代表每个客户端、每种文案的效果都已验证。
 
 按 [MIT 许可证](LICENSE) 开源。素材记录见[素材来源](ASSET_SOURCES.md)，依赖说明见[第三方声明](THIRD_PARTY_NOTICES.md)，安全范围见[安全政策](SECURITY.md)。
 
@@ -189,7 +189,7 @@ python3 scripts/pack.py outputs/demo
 
 欢迎交流 AI 海报制作、内容创作与增长实践，也欢迎分享作品、提出问题与改进建议。
 
-**扫码添加微信，申请入群。** 添加时可备注「爆款海报生成器」。
+**扫码添加微信，申请入群。** 添加时可备注「Hot Poster Generator」。
 
 <img src="assets/feedback-wechat-qr.jpg" alt="星辰汇、星辰AI增长交流群：扫码添加微信，申请入群" width="320" />
 

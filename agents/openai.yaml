@@ -1,4 +1,4 @@
 interface:
-  display_name: "爆款海报生成器"
+  display_name: "Hot Poster Generator"
   short_description: "星辰汇 · 星辰AI增长｜把文案与素材制作成长图、单页海报和组图"
-  default_prompt: "使用 $baokuan-poster-generator，将我提供的活动文案、素材和参考图做成长图海报，并按内容导出组图。"
+  default_prompt: "使用 $hot-poster-generator，将我提供的活动文案、素材和参考图做成长图海报，并按内容导出组图。"

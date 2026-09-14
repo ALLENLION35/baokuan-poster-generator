@@ -5,8 +5,8 @@
 Run commands from the repository root. Install Node.js 22+, npm, Python 3 and a Chinese font first. Clone the repository, enter its directory, then run:
 
 ```sh
-git clone https://github.com/ALLENLION35/baokuan-poster-generator.git
-cd baokuan-poster-generator
+git clone https://github.com/ALLENLION35/hot-poster-generator.git
+cd hot-poster-generator
 npm ci
 npx playwright install chromium
 npm run demo
@@ -59,7 +59,7 @@ Allow extra local asset folders:
 node scripts/render.cjs --input work/poster.html --plan work/pages.json --asset-root work/assets --out outputs/slides-v1
 ```
 
-The renderer refuses non-empty output directories by default. Use a new version directory for revisions, or pass `--overwrite` only when you mean to replace an existing baokuan-poster-generator export.
+The renderer refuses non-empty output directories by default. Use a new version directory for revisions, or pass `--overwrite` only when you mean to replace an existing hot-poster-generator export.
 
 ## Page Plan
 
@@ -86,7 +86,7 @@ Do not force dense content into one page by lowering `minScale`. Split the conte
 
 ## Output
 
-A baokuan-poster-generator export includes:
+A hot-poster-generator export includes:
 
 - `poster.html`
 - `poster.png`
@@ -139,7 +139,7 @@ tests/                    Node test regression suite
 
 The `1.0.0` release files were validated locally on macOS with Node 24.11.1, Playwright 1.62.1, Sharp 0.35.4, and an existing Chromium 148 browser. The suite passed 35/35 tests, the built-in demo rendered a long poster plus five slides and ZIP packaging, and two brand-colour workflows were rendered through long poster, five slides, and ZIP packaging.
 
-The initial release also passed all 35 tests in [Ubuntu CI](https://github.com/ALLENLION35/baokuan-poster-generator/actions/runs/34823128808). Windows has not been tested.
+The initial release also passed all 35 tests in [Ubuntu CI](https://github.com/ALLENLION35/hot-poster-generator/actions/runs/34823128808). Windows has not been tested.
 
 ## License
 

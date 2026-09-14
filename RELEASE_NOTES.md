@@ -1,8 +1,12 @@
-# 爆款海报生成器 v1.0.0
+# Hot Poster Generator v1.0.1
 
 **星辰汇 · 星辰AI增长 开源项目**
 
 把活动文案、Logo、照片和参考图制作成中文长图、单页海报或编号组图，保留 HTML 源稿供后续修改。
+
+## 1.0.1 更名修订
+
+项目名称统一为 **Hot Poster Generator**，仓库与 Skill 标识改为 `hot-poster-generator`。更新安装说明及活动案例展示，渲染逻辑与依赖保持不变。此前 1.0.0 安装包保留为历史版本；本版下载包解压后使用新的技能目录名。
 
 ## 本版包含
 
@@ -16,7 +20,7 @@
 
 ## 安装与使用
 
-下载源码后，将 `baokuan-poster-generator/` 放入支持 Agent Skills 的宿主技能目录；在仓库目录安装渲染依赖。只想先看结果，也可按 [README](README.md) 运行本地演示。
+下载源码后，将 `hot-poster-generator/` 放入支持 Agent Skills 的宿主技能目录；在仓库目录安装渲染依赖。只想先看结果，也可按 [README](README.md) 运行本地演示。
 
 依赖：Node.js 22+、Python 3、Playwright 1.62.1、Sharp 0.35.4、Chromium 与中文字体。
 
@@ -26,8 +30,8 @@
 
 1.0 的组图页数由分页方案决定，尚无自动九页叙事或 3×3 整体拼图引擎。导出通过不代表内容、审美或二维码已经验收；发布前仍需查看成品。其他候选方向见 [ROADMAP](ROADMAP.md)。
 
-作者：梁海龙（allenlion）。许可：[MIT](LICENSE)。示例活动与人物为虚构，素材来源见 [ASSET_SOURCES](ASSET_SOURCES.md)。
+作者：梁海龙（allenlion）。许可：[MIT](LICENSE)。内置 demo 使用虚构资料，README 活动案例由维护者提供；素材来源见 [ASSET_SOURCES](ASSET_SOURCES.md)。
 
 ## 加入交流群
 
-欢迎交流海报制作、内容创作和 AI 增长实践。星辰汇 · 星辰AI增长交流群入口见 [README 底部](README.md)。扫码添加微信，备注「爆款海报生成器」申请入群。
+欢迎交流海报制作、内容创作和 AI 增长实践。星辰汇 · 星辰AI增长交流群入口见 [README 底部](README.md)。扫码添加微信，备注「Hot Poster Generator」申请入群。

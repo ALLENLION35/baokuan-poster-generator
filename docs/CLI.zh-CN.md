@@ -11,8 +11,8 @@
 从源码开始：
 
 ```sh
-git clone https://github.com/ALLENLION35/baokuan-poster-generator.git
-cd baokuan-poster-generator
+git clone https://github.com/ALLENLION35/hot-poster-generator.git
+cd hot-poster-generator
 npm ci
 npx playwright install chromium
 ```
@@ -119,7 +119,7 @@ node scripts/render.cjs --input work/single.html --width 1242 --out outputs/sing
 node scripts/render.cjs --input work/poster.html --plan work/pages.json --asset-root work/assets --out outputs/slides-v1
 ```
 
-导出目录非空会报错，这是为了避免误覆盖旧成品。确认覆盖同一个 baokuan-poster-generator 导出目录时可加 `--overwrite`。
+导出目录非空会报错，这是为了避免误覆盖旧成品。确认覆盖同一个 hot-poster-generator 导出目录时可加 `--overwrite`。
 
 ## 分页方案
 
@@ -209,7 +209,7 @@ tests/                    Node test 回归测试
 - 内置 demo 完成长图、5 页组图和 ZIP 打包。
 - 黄色和绿色品牌分别完成取色、初始化、长图 + 5 页组图、ZIP 打包。
 
-Windows 尚未实测。首次发布的 Ubuntu GitHub Actions 已通过 35 项测试：[运行记录](https://github.com/ALLENLION35/baokuan-poster-generator/actions/runs/34823128808)。
+Windows 尚未实测。首次发布的 Ubuntu GitHub Actions 已通过 35 项测试：[运行记录](https://github.com/ALLENLION35/hot-poster-generator/actions/runs/34823128808)。
 
 ## 素材与许可证
 

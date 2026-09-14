@@ -1,226 +1,164 @@
 # 爆款海报生成器 · Viral Poster Generator
 
-**An open-source project associated with 星辰汇 and 星辰AI增长.**
+**Give your AI assistant the copy and assets. Get long posters, single posters or slide sets you can keep editing.**
 
-Viral Poster Generator (`baokuan-poster-generator`) is an Agent Skill and local HTML rendering toolkit for Chinese event posters. It helps an AI assistant turn event copy and local assets into an editable static HTML source, then exports a long poster, a fixed-size poster, or a set of numbered social-media slides.
+An open-source project by **星辰汇 · 星辰AI增长** · Author: allenlion · Version: 1.0 · [MIT](LICENSE) · [中文说明](README.md)
 
-Current version: `1.0.0`. License: MIT.
+For course promotions, events, product introductions and community content. Install this skill in an AI assistant that can read and write files and run commands, then describe the result you want in ordinary language.
 
-中文说明: [README.md](README.md)
+## What you get
+
+| Your goal | Deliverables |
+| --- | --- |
+| A long event poster | A complete JPG / PNG image |
+| A single social post | A poster at your chosen ratio, such as 3:4 or 9:16 |
+| A multi-image post | Numbered images, an overview and a ZIP archive |
+| Changes to a previous design | Updated images and an editable HTML source |
+
+Nine-card posts require an explicit nine-page content plan. Cutting a single master image into a 3×3 grid is not supported.
+
+## Quick install
+
+Send this to Codex, Claude Code or another assistant that can manage files and execute commands:
+
+```text
+Install Viral Poster Generator (爆款海报生成器):
+https://github.com/ALLENLION35/baokuan-poster-generator
+
+Read the README and install the complete skill directory for this application.
+Check and prepare the export environment: Node.js 22+, Python 3, npm dependencies,
+Chromium and Chinese fonts. Reuse a suitable existing environment where available.
+Confirm that baokuan-poster-generator is discoverable, run the built-in demo,
+and show me the image preview and output file locations.
+```
+
+Installation is checked when the demo produces real poster and slide files. The first setup may download dependencies and a browser; time depends on your existing environment and network.
+
+[Download the full 1.0 skill package](https://github.com/ALLENLION35/baokuan-poster-generator/releases/download/v1.0.0/baokuan-poster-generator-1.0.0.zip) · [Release page](https://github.com/ALLENLION35/baokuan-poster-generator/releases/tag/v1.0.0)
+
+A text-only chat cannot run the image exporter. Uploading only `SKILL.md` does not install the complete toolkit.
+
+## Start using it
+
+Open a new conversation after installation, attach your copy and assets, then try one of these:
+
+**Long poster**
+
+```text
+Use baokuan-poster-generator to make a Chinese long poster from the attached event copy.
+The audience is business owners. Keep the design simple and refined.
+Preserve the date, location, price and registration details. Deliver a JPG and editable source.
+```
+
+**Single poster**
+
+```text
+Make a 3:4 social poster using the attached copy, logo and product photo.
+Follow the logo colours, highlight the selling points and price,
+and place my supplied contact QR code at the bottom.
+```
+
+**Nine-card post**
+
+```text
+Use baokuan-poster-generator to organise this content into nine 1080×1440 cards.
+Start with a cover, give each middle card one topic, and end with a summary and my call to action.
+Keep the style consistent and preserve key facts. If the content is insufficient or too dense,
+explain the adjustment needed. Deliver numbered images, an overview and a ZIP.
+```
+
+**Revise a design**
+
+```text
+Revise the last version: make the headline stronger, shorten the second section,
+and use warmer colours. Keep the approved photos and event facts. Export the updated files.
+```
+
+When continuing in a new conversation, provide the latest `poster.html` so the assistant can edit the current version.
+
+## What to provide
+
+Start with your copy and intended channel. Add a logo, brand colours, people or product photos, a real QR code and reference images if available. Identify people in photos when multiple people are involved. References guide visual style; their names, prices and claims are not facts about your event.
+
+No reference image is required. Describe the mood, audience and purpose instead.
+
+## Examples
+
+These examples use fictional event and person details. Results depend on the copy, assets, assistant and revisions.
+
+![Three event cover examples](examples/real-runs.png)
+
+<details>
+<summary>View six preset colour styles</summary>
 
 ![Six preset themes](examples/themes.png)
 
-![Three fictional event runs](examples/real-runs.png)
+The presets cover technology, minimal, festive, market, natural and business styles. They primarily control colours and visual tone. A colourful logo can supply the brand palette.
 
-## What It Does
+</details>
 
-- Exports a 1080px-wide long poster for WeChat articles and private sharing.
-- Exports a fixed-size single poster when the source `#poster` has a target canvas size.
-- Exports slide sets from the same HTML source using a JSON page plan.
-- Derives a full theme from a colourful logo, or falls back to six preset themes.
-- Generates deterministic text-free SVG backdrops with Python standard library only.
-- Renders locally with Playwright and Sharp.
-- Inlines local assets, blocks remote requests, checks image loading and text clipping, and writes a `validation.json` manifest.
+## Other installation methods
 
-It is not a visual editor and not an automatic nine-page storytelling engine. A nine-card set can be produced with an explicit page plan, but page count, grouping, and visual judgement still depend on the AI assistant or the human operator.
+### With skills CLI
 
-## Requirements
+With Node.js 22+ and npm available, run:
 
-- Node.js 22+
-- Python 3
-- npm
-- Chromium for Playwright
-- Noto CJK or another Chinese font on Linux
+```sh
+npx skills add ALLENLION35/baokuan-poster-generator --skill baokuan-poster-generator
+```
 
-Install dependencies:
+Choose your agent at the prompt. Installation is project-scoped by default; add `--global` for use across projects. See the [official skills CLI documentation](https://github.com/vercel-labs/skills).
+
+This installs skill files, not the rendering dependencies. Ask the assistant to complete the environment and demo checks above, or use the manual steps below.
+
+### From the ZIP
+
+Extract the release package to obtain `baokuan-poster-generator/`. Ask your assistant to install that complete folder or follow your host's skill-directory instructions. Keep all scripts, assets, themes, references and dependency manifests.
+
+If your application has a skill-import feature, follow its instructions. Importing the files does not guarantee that its environment can run the exporter; clients have not all been tested.
+
+### Prepare the rendering environment manually
+
+In the actual installed skill directory containing `package.json`, run:
 
 ```sh
 npm ci
 npx playwright install chromium
-```
-
-Run tests:
-
-```sh
-npm test
-```
-
-Render the built-in demo:
-
-```sh
 npm run demo
 python3 scripts/pack.py outputs/demo
 ```
 
-If `outputs/demo` already exists, render to a new directory or pass `--overwrite` intentionally:
+Node.js 22+, Python 3 and Chinese fonts are required. Open `outputs/demo/poster.jpg`, `outputs/demo/overview.png` and `outputs/demo/slides.zip` to inspect the result. For Linux system dependencies, repeated demo runs and Windows limitations, see the [CLI guide](docs/CLI.en.md).
 
-```sh
-node scripts/render.cjs --input assets/template.html --plan examples/pages.json --out outputs/demo-v2
-python3 scripts/pack.py outputs/demo-v2
-```
+## Common questions
 
-## Use As An Agent Skill
+**Do I need to code?** With a capable AI assistant, you can describe the work and let it install, design, export and revise the files.
 
-Place the repository directory in your AI assistant's skill folder, for example:
+**Why does export fail after installation?** Skill files and runtime dependencies are separate. Give the error to the assistant and ask it to check Node.js, Python, npm dependencies, Chromium and fonts.
 
-| Host | Folder |
-| --- | --- |
-| Claude Code | `~/.claude/skills/baokuan-poster-generator/` |
-| Codex | `~/.agents/skills/baokuan-poster-generator/` |
-| Other Agent Skills hosts | Follow the host documentation |
+**Do I need an image-generation API?** Basic layout and export do not require one. The toolkit can create programmatic backdrops without external image generation. Your AI application's own fees still apply.
 
-Example prompts:
+**Why does an existing output directory cause an error?** Existing deliverables are preserved by default. Export the revision to a new directory; see the CLI guide for commands.
 
-```text
-Use baokuan-poster-generator to turn this event copy into a WeChat long poster and a slide set.
-```
+**Can I publish immediately?** Inspect the layout, dates, prices, photo/name matches and actual QR scanning first. Automated checks cover issues such as image loading and text clipping, not final factual or visual approval.
 
-```text
-Create a 3:4 single poster from the attached copy and logo. Follow the logo colours and make the price prominent.
-```
+**Will my posters include the project's QR code?** The community QR is only for project documentation. Your posters use your supplied assets and contact information.
 
-Provide the event copy, logo, photos, QR code, and optional reference images. Reference images are used only for visual direction; their names, prices, testimonials, and facts are not copied into the poster.
+## Learn more and contribute
 
-The full skill instructions are in [SKILL.md](SKILL.md).
+- [Command-line guide](docs/CLI.en.md): themes, brand colours, HTML editing, page plans and export commands.
+- [Skill instructions](SKILL.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md) · [Report an issue](https://github.com/ALLENLION35/baokuan-poster-generator/issues)
 
-## CLI Workflow
+Version 1.0 passed 35 tests locally on macOS and in [Ubuntu CI](https://github.com/ALLENLION35/baokuan-poster-generator/actions/runs/34823128808). This does not establish compatibility with every client or validate the visual quality of every input.
 
-Create local work directories first:
+[MIT License](LICENSE) · [Asset sources](ASSET_SOURCES.md) · [Third-party notices](THIRD_PARTY_NOTICES.md) · [Security policy](SECURITY.md)
 
-```sh
-mkdir -p work outputs
-```
+## Community and feedback
 
-Create a themed source file. Choose either the preset-theme route or the brand-theme route before writing the source file; `setup.py` refuses to overwrite an existing output by default.
+**星辰汇 · 星辰AI增长 — Poster creation and AI growth community**
 
-```sh
-python3 scripts/backdrop.py --style grid --bg "#08131c" --accent "#0b4f8a" --accent2 "#f1a300" --seed 4 --out work/backdrop.svg
-python3 scripts/setup.py --theme business-navy --backdrop work/backdrop.svg --out work/poster.html
-```
+Share your work, ask questions and suggest improvements. Scan the QR code to add the maintainer on WeChat and request a group invitation. Mention “爆款海报生成器” when adding the contact.
 
-Optional alternative: derive a brand theme from a colourful logo. Put the user-provided logo at `work/assets/logo.png` first:
-
-```sh
-node scripts/palette.cjs work/assets/logo.png --base business-navy --theme-out work/brand.css
-python3 scripts/setup.py --theme work/brand.css --backdrop none --out work/brand-poster.html
-```
-
-If the palette report says `isColorful: false`, the logo does not drive the theme. Pick a preset by event type instead. If you decide to use the brand theme, keep editing `work/brand-poster.html`, or change the output path to a `work/poster.html` that does not already exist. Later render commands should use the source path you actually edited.
-
-Export a long poster:
-
-```sh
-node scripts/render.cjs --input work/poster.html --out outputs/long-v1
-```
-
-Export a long poster and slides:
-
-```sh
-cp examples/pages.json work/pages.json
-node scripts/render.cjs --input work/poster.html --plan work/pages.json --out outputs/slides-v1
-python3 scripts/pack.py outputs/slides-v1
-```
-
-Allow extra local asset folders:
-
-```sh
-node scripts/render.cjs --input work/poster.html --plan work/pages.json --asset-root work/assets --out outputs/slides-v1
-```
-
-The renderer refuses non-empty output directories by default. Use a new version directory for revisions, or pass `--overwrite` only when you mean to replace an existing baokuan-poster-generator export.
-
-## Page Plan
-
-Slides are built from a JSON plan. Each selector must match one complete content block in the source HTML:
-
-```json
-{
-  "width": 1080,
-  "height": 1440,
-  "minScale": 0.82,
-  "title": "Event poster sample",
-  "footer": "Use the actual date and location from the copy",
-  "pages": [
-    {"name": "Cover", "selectors": ["#cover"], "cover": true},
-    {"name": "Overview", "selectors": ["#overview", "#audience"]},
-    {"name": "Highlights", "selectors": ["#highlights"], "wrap": true},
-    {"name": "Speakers", "selectors": ["#people"]},
-    {"name": "Registration", "selectors": ["#action"]}
-  ]
-}
-```
-
-Do not force dense content into one page by lowering `minScale`. Split the content, reduce nonessential decoration, or simplify the layout.
-
-## Output
-
-A baokuan-poster-generator export includes:
-
-- `poster.html`
-- `poster.png`
-- `poster.jpg`
-- `validation.json`
-
-A slide export also includes:
-
-- `pages.html`
-- `slides/*.jpg`
-- `overview.png`
-- `slides.zip` after running `scripts/pack.py`
-
-`validation.json` records the generator, schema version, owned files, canvas sizes, page count, and review flags. Script validation is not final editorial review: names, facts, photo matching, and QR scanning still need human confirmation.
-
-For a fixed-size single poster, first edit the source `#poster` to the target canvas size, then declare that width at export time:
-
-```sh
-node scripts/render.cjs --input work/single.html --width 1242 --out outputs/single-v1
-```
-
-## Repository Layout
-
-```text
-SKILL.md                  Agent Skill entry point
-references/styling.md     Themes, brand colours, and backdrops
-references/workflow.md    Work files, asset mapping, and content rules
-references/rendering.md   Renderer API, page plans, and validation
-assets/template.html      Static HTML template
-themes/*.css              Six preset themes
-scripts/palette.cjs       Logo colour extraction and theme derivation
-scripts/backdrop.py       Procedural SVG backdrop generator
-scripts/setup.py          Theme + backdrop -> HTML source
-scripts/render.cjs        Render, validate, and export
-scripts/pack.py           Package slide JPGs into ZIP
-examples/                 Example plans and images
-tests/                    Node test regression suite
-```
-
-## Boundaries
-
-- Works with local trusted HTML and user-provided local assets.
-- Blocks scripts, iframes, external CSS, and remote resources during export.
-- Does not claim to be a general-purpose HTML sandbox.
-- Does not publish anywhere or connect to accounts.
-- Does not redraw real people.
-- Does not generate fake scannable QR codes.
-
-## Verification
-
-The `1.0.0` release files were validated locally on macOS with Node 24.11.1, Playwright 1.62.1, Sharp 0.35.4, and an existing Chromium 148 browser. The suite passed 35/35 tests, the built-in demo rendered a long poster plus five slides and ZIP packaging, and two brand-colour workflows were rendered through long poster, five slides, and ZIP packaging.
-
-Linux and Windows were not rerun in that validation pass. Remote CI results should be treated as authoritative after the repository is published.
-
-## License
-
-MIT. See [LICENSE](LICENSE). Author: 梁海龙 (allenlion).
-
-Project docs: [CHANGELOG.md](CHANGELOG.md), [RELEASE_NOTES.md](RELEASE_NOTES.md), [ROADMAP.md](ROADMAP.md), [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-## Community · 星辰汇 · 星辰AI增长
-
-Join the 星辰汇 and 星辰AI增长 community to exchange AI poster workflows, content ideas, growth practices, and project feedback.
-
-Scan the QR code to add the maintainer on WeChat and request an invitation to the discussion group. Mention “爆款海报生成器” when adding the contact.
-
-<img src="assets/feedback-wechat-qr.jpg" alt="星辰汇 and 星辰AI增长 community: add WeChat contact and request a group invitation" width="320" />
+<img src="assets/feedback-wechat-qr.jpg" alt="星辰汇 and 星辰AI增长: add the maintainer on WeChat to request a group invitation" width="320" />
 
 X: [allenlion · @ALLENLION35](https://x.com/ALLENLION35)

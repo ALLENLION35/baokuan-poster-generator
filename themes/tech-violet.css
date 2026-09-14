@@ -1,0 +1,37 @@
+/* theme: tech-violet | 科技蓝紫
+   mood: 深色、发光、未来感
+   fit: 科技产品发布、AI/数字化课程、开发者活动
+   backdrop: mesh
+   用法: python3 scripts/setup.py --theme tech-violet --backdrop <底图或 none> --out work/poster.html */
+:root{
+  --bg:#050817;
+  --bg-glow-1:#24124b88;
+  --bg-glow-2:#092b5488;
+  --fg:#ffffff;
+  --fg-soft:#bcc7e0;
+  --fg-muted:#a6b7df;
+  --accent:#81c5ff;
+  --accent-2:#c9bbff;
+  --accent-3:#f4bdff;
+  --line:#9eaff14d;
+  --card:#172749;
+  --card-2:#16142b;
+  --card-border:#718ac84d;
+  --card-fg:#e5e7f6;
+  --panel:#e9ebff;
+  --panel-2:#c2c9ff;
+  --panel-fg:#202349;
+  --panel-muted:#5c5c81;
+  --panel-tag:#6362b8;
+  --cta:linear-gradient(130deg,#313b85,#533186 70%,#412254);
+  --cta-border:#a7b2ff88;
+  --cta-fg:#ffffff;
+  --cta-soft:#e2e7ff;
+  --radius:28px;
+  --radius-sm:18px;
+  --font-display:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --font-body:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --hero:none;
+  --hero-size:100% 100%;
+  --hero-fade:linear-gradient(0deg,var(--bg) 0%,transparent 24%);
+}

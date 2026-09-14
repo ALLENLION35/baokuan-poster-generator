@@ -1,0 +1,37 @@
+/* theme: fresh-green | 清新自然
+   mood: 浅绿底、柔和、健康感
+   fit: 健康/运动课程、户外活动、环保与公益、母婴与教育
+   backdrop: waves
+   用法: python3 scripts/setup.py --theme fresh-green --backdrop <底图或 none> --out work/poster.html */
+:root{
+  --bg:#eef7ef;
+  --bg-glow-1:#c9ead388;
+  --bg-glow-2:#dff3e688;
+  --fg:#12372a;
+  --fg-soft:#3b5a4c;
+  --fg-muted:#6e8a7c;
+  --accent:#2f9e63;
+  --accent-2:#5cc48a;
+  --accent-3:#a6e3bf;
+  --line:#12372a22;
+  --card:#ffffff;
+  --card-2:#e4f3e8;
+  --card-border:#2f9e6333;
+  --card-fg:#1e3d30;
+  --panel:#12372a;
+  --panel-2:#1f5a43;
+  --panel-fg:#ffffff;
+  --panel-muted:#c6e6d3;
+  --panel-tag:#2f9e63;
+  --cta:linear-gradient(130deg,#2f9e63,#1f7a4a);
+  --cta-border:#2f9e63;
+  --cta-fg:#ffffff;
+  --cta-soft:#dff5e6;
+  --radius:24px;
+  --radius-sm:16px;
+  --font-display:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --font-body:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --hero:none;
+  --hero-size:100% 100%;
+  --hero-fade:linear-gradient(0deg,var(--bg) 0%,transparent 24%);
+}

@@ -1,0 +1,37 @@
+/* theme: minimal-light | 极简白
+   mood: 浅色、留白、克制
+   fit: 设计/艺术活动、高端沙龙、品牌发布、专业培训
+   backdrop: geometric
+   用法: python3 scripts/setup.py --theme minimal-light --backdrop <底图或 none> --out work/poster.html */
+:root{
+  --bg:#f7f6f2;
+  --bg-glow-1:#e8e4da88;
+  --bg-glow-2:#dfe6ee88;
+  --fg:#16181d;
+  --fg-soft:#4a4f5a;
+  --fg-muted:#7a8090;
+  --accent:#1f4bff;
+  --accent-2:#3d6bff;
+  --accent-3:#7c9cff;
+  --line:#16181d1f;
+  --card:#ffffff;
+  --card-2:#f0efea;
+  --card-border:#16181d1a;
+  --card-fg:#2a2e38;
+  --panel:#16181d;
+  --panel-2:#2b3040;
+  --panel-fg:#ffffff;
+  --panel-muted:#c3c7d2;
+  --panel-tag:#1f4bff;
+  --cta:linear-gradient(130deg,#16181d,#2b3040);
+  --cta-border:#16181d;
+  --cta-fg:#ffffff;
+  --cta-soft:#d5d8e2;
+  --radius:12px;
+  --radius-sm:8px;
+  --font-display:"Noto Serif CJK SC","Songti SC","SimSun",serif;
+  --font-body:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --hero:none;
+  --hero-size:100% 100%;
+  --hero-fade:linear-gradient(0deg,var(--bg) 0%,transparent 24%);
+}

@@ -1,0 +1,20 @@
+node_modules/
+outputs/
+work/
+coverage/
+.DS_Store
+npm-debug.log*
+playwright-report/
+test-results/
+
+# Project-specific and sensitive material belongs in ignored work/.
+.env
+.env.*
+*.log
+__pycache__/
+
+*.py[cod]
+.venv/
+.omx/
+.idea/
+.vscode/

@@ -1,0 +1,37 @@
+/* theme: business-navy | 商务深蓝
+   mood: 藏青底、金色点缀、稳重
+   fit: 峰会论坛、企业培训、招商招募、金融/咨询活动
+   backdrop: grid
+   用法: python3 scripts/setup.py --theme business-navy --backdrop <底图或 none> --out work/poster.html */
+:root{
+  --bg:#0f1d33;
+  --bg-glow-1:#1e3a6488;
+  --bg-glow-2:#0b2a4d88;
+  --fg:#ffffff;
+  --fg-soft:#c9d4e6;
+  --fg-muted:#93a4c0;
+  --accent:#4fb3ff;
+  --accent-2:#e0c179;
+  --accent-3:#fff0c2;
+  --line:#c9d4e633;
+  --card:#172a48;
+  --card-2:#111f38;
+  --card-border:#4fb3ff33;
+  --card-fg:#e3eaf6;
+  --panel:#f4f6fa;
+  --panel-2:#dfe6f2;
+  --panel-fg:#0f1d33;
+  --panel-muted:#4c5c76;
+  --panel-tag:#1e3a64;
+  --cta:linear-gradient(130deg,#1e3a64,#0f1d33);
+  --cta-border:#e0c179;
+  --cta-fg:#ffffff;
+  --cta-soft:#d6dff0;
+  --radius:14px;
+  --radius-sm:10px;
+  --font-display:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --font-body:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --hero:none;
+  --hero-size:100% 100%;
+  --hero-fade:linear-gradient(0deg,var(--bg) 0%,transparent 24%);
+}

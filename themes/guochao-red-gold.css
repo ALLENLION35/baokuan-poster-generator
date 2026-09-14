@@ -1,0 +1,37 @@
+/* theme: guochao-red-gold | 国潮红金
+   mood: 热烈、喜庆、传统纹样感
+   fit: 年货节、开业庆典、传统文化活动、节日促销
+   backdrop: rings
+   用法: python3 scripts/setup.py --theme guochao-red-gold --backdrop <底图或 none> --out work/poster.html */
+:root{
+  --bg:#8a1616;
+  --bg-glow-1:#c0392b88;
+  --bg-glow-2:#5a0b0b88;
+  --fg:#fff4dc;
+  --fg-soft:#f6dfb7;
+  --fg-muted:#e6c58e;
+  --accent:#f6d38a;
+  --accent-2:#ffe7ad;
+  --accent-3:#fff5d6;
+  --line:#f6d38a55;
+  --card:#a51f1f;
+  --card-2:#7a1010;
+  --card-border:#f6d38a66;
+  --card-fg:#fff1d6;
+  --panel:#fff6e3;
+  --panel-2:#f6dfb0;
+  --panel-fg:#5a1a0f;
+  --panel-muted:#8a5a3a;
+  --panel-tag:#b8261f;
+  --cta:linear-gradient(130deg,#d9a441,#b8861f 70%,#9c6c12);
+  --cta-border:#ffe7ad;
+  --cta-fg:#3d1a05;
+  --cta-soft:#5a2e10;
+  --radius:16px;
+  --radius-sm:10px;
+  --font-display:"Noto Serif CJK SC","Songti SC","SimSun",serif;
+  --font-body:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --hero:none;
+  --hero-size:100% 100%;
+  --hero-fade:linear-gradient(0deg,var(--bg) 0%,transparent 24%);
+}

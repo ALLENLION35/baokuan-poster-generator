@@ -1,0 +1,36 @@
+{
+  "width": 1080,
+  "height": 1440,
+  "minScale": 0.82,
+  "title": "活动海报示例",
+  "footer": "日期与地点以实际文案为准",
+  "theme": {
+    "background": "#050817",
+    "color": "#cbd8f2",
+    "border": "#9fabe333"
+  },
+  "pages": [
+    {
+      "name": "封面",
+      "selectors": ["#cover"],
+      "cover": true
+    },
+    {
+      "name": "活动概览",
+      "selectors": ["#overview", "#audience"]
+    },
+    {
+      "name": "活动亮点",
+      "selectors": ["#highlights"],
+      "wrap": true
+    },
+    {
+      "name": "主讲与嘉宾",
+      "selectors": ["#people"]
+    },
+    {
+      "name": "报名与参与",
+      "selectors": ["#action"]
+    }
+  ]
+}

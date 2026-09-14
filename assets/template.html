@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>活动海报模板</title>
+<style>
+/* ---- 主题变量：结构与配色分离。scripts/setup.py 会用 themes/*.css 替换整个 :root 块。 ---- */
+:root{
+  --bg:#050817;
+  --bg-glow-1:#24124b88;
+  --bg-glow-2:#092b5488;
+  --fg:#ffffff;
+  --fg-soft:#bcc7e0;
+  --fg-muted:#a6b7df;
+  --accent:#81c5ff;
+  --accent-2:#c9bbff;
+  --accent-3:#f4bdff;
+  --line:#9eaff14d;
+  --card:#172749;
+  --card-2:#16142b;
+  --card-border:#718ac84d;
+  --card-fg:#e5e7f6;
+  --panel:#e9ebff;
+  --panel-2:#c2c9ff;
+  --panel-fg:#202349;
+  --panel-muted:#5c5c81;
+  --panel-tag:#6362b8;
+  --cta:linear-gradient(130deg,#313b85,#533186 70%,#412254);
+  --cta-border:#a7b2ff88;
+  --cta-fg:#ffffff;
+  --cta-soft:#e2e7ff;
+  --radius:28px;
+  --radius-sm:18px;
+  --font-display:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --font-body:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --hero:url("hero.png");
+  --hero-size:100% 100%;
+  --hero-fade:linear-gradient(0deg,var(--bg) 0%,transparent 24%);
+}
+
+/* ---- 结构样式：只引用变量，换主题不用改这里 ---- */
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body)}
+body{width:1080px}
+#poster{width:1080px;overflow:hidden;color:var(--fg);background:radial-gradient(ellipse at 100% 27%,var(--bg-glow-1),transparent 24%),radial-gradient(ellipse at 0% 60%,var(--bg-glow-2),transparent 24%),var(--bg)}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--font-display)}
+p{font-size:34px;line-height:1.65;color:var(--fg-soft)}
+.grad{background:linear-gradient(95deg,var(--accent),var(--accent-2) 55%,var(--accent-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* 封面 */
+.hero{height:1440px;position:relative;padding:65px 70px;background-image:var(--hero-fade),var(--hero);background-size:var(--hero-size);background-position:center;background-repeat:no-repeat}
+.brand{display:flex;justify-content:space-between;align-items:center;font-size:28px;letter-spacing:3px;color:var(--fg)}
+.brand b{font-size:34px}
+.logo{display:inline-block;color:var(--accent);font-size:48px;margin-right:14px;vertical-align:middle}
+.edition{font-size:23px;letter-spacing:2px;color:var(--fg-muted)}
+.eyebrow{margin-top:85px;font-size:27px;letter-spacing:8px;color:var(--fg-muted)}
+.hero h1{font-size:109px;line-height:1.14;letter-spacing:-3px;margin-top:25px;white-space:nowrap;font-weight:800}
+.hero h2{font-size:68px;line-height:1.37;font-weight:650;margin-top:23px}
+.hero .sub{font-size:35px;line-height:1.6;margin-top:27px;color:var(--fg-soft)}
+.hero-bottom{position:absolute;bottom:76px;left:70px;right:70px}
+.hostline{font-size:32px;color:var(--fg);margin-bottom:30px}
+.hostline b{font-size:40px;margin-right:18px}
+.pills{display:flex;gap:15px;flex-wrap:wrap}
+.pill{padding:12px 23px;border:1px solid var(--card-border);background:var(--card);border-radius:50px;font-size:26px;color:var(--card-fg)}
+.hero-date{margin-top:38px;border-top:1px solid var(--line);padding-top:27px;display:flex;align-items:center;justify-content:space-between}
+.hero-date strong{font-size:43px;letter-spacing:1px}
+.hero-date span{font-size:29px;color:var(--fg-muted)}
+
+/* 通用区块 */
+section{padding:42px 64px 34px}
+.section-title{display:flex;align-items:center;gap:22px;margin-bottom:39px}
+.section-title .line{flex:1;height:1px;background:linear-gradient(90deg,var(--accent),var(--accent-2) 50%,transparent)}
+.section-title h2{font-size:47px;letter-spacing:2px}
+.section-title .index{color:var(--fg-muted);font-size:23px;font-family:Arial;letter-spacing:2px}
+.intro{padding-top:32px;padding-bottom:45px}
+.intro h2{font-size:51px;line-height:1.45;margin-bottom:27px}
+.path{display:flex;gap:15px;margin-top:34px}
+.path>div{flex:1;padding:27px 15px;background:linear-gradient(135deg,var(--card),var(--card-2));border:1px solid var(--card-border);border-radius:20px;text-align:center}
+.path b{font-size:42px;display:block;color:var(--accent-2);margin-bottom:9px}
+.path span{font-size:27px;color:var(--card-fg)}
+
+/* 要点卡片 */
+.highlight{padding:42px 42px 39px;border-radius:var(--radius);margin-bottom:33px;position:relative;border:1px solid var(--card-border);background:linear-gradient(135deg,var(--card),var(--card-2) 60%,var(--card-2));color:var(--card-fg)}
+.highlight-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:23px;margin-bottom:28px}
+.highlight-head b{font-size:71px;line-height:1;font-family:Arial;letter-spacing:2px}
+.highlight-head span{font-size:25px;color:var(--fg-muted)}
+.highlight h3{font-size:44px;line-height:1.4;margin-bottom:20px}
+.highlight p{color:var(--card-fg);font-size:33px;line-height:1.6}
+.bullets{margin-top:23px}
+.bullets div{font-size:32px;line-height:1.65;color:var(--card-fg);padding-left:27px;margin-top:13px;position:relative}
+.bullets div:before{content:'';width:7px;height:7px;background:var(--accent);position:absolute;left:0;top:22px;border-radius:50%}
+.workflow{background:var(--panel);border-radius:var(--radius-sm);padding:26px 25px;margin-top:27px;color:var(--panel-fg)}
+.workflow .label{font-size:24px;color:var(--panel-muted);margin-bottom:15px;letter-spacing:2px}
+.flowrow{font-size:29px;line-height:1.75;font-weight:600;text-align:center}
+.flowrow em{font-style:normal;color:var(--panel-accent,var(--panel-tag));padding:0 8px}
+.note{margin-top:26px;padding-top:21px;border-top:1px solid var(--line);color:var(--accent-2);font-size:29px;line-height:1.6}
+.double{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:28px}
+.double>div{background:var(--card-2);border:1px solid var(--card-border);border-radius:17px;padding:24px}
+.double b{display:block;font-size:31px;color:var(--accent-2);margin-bottom:12px}
+.double p{font-size:29px;line-height:1.65}
+
+/* 人物卡片：与背景形成对比的面板 */
+.person{border-radius:25px;background:linear-gradient(125deg,var(--panel),var(--panel-2));color:var(--panel-fg);padding:35px 38px;margin-bottom:25px}
+.person-name{display:flex;align-items:center;gap:23px;margin-bottom:12px}
+.person-name b{font-size:56px}
+.person-name span{font-size:25px;padding:7px 15px;border-radius:30px;background:var(--panel-tag);color:var(--panel-tag-fg,#fff)}
+.person .identity{font-size:28px;line-height:1.5;color:var(--panel-muted);margin-bottom:22px}
+.person h3{font-size:35px;line-height:1.5;color:var(--panel-fg);margin-bottom:17px}
+.person p{font-size:30px;color:var(--panel-muted);line-height:1.65}
+.person .photo{float:right;width:300px;height:360px;margin:0 0 20px 30px;border-radius:20px;overflow:hidden}
+.person .photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.person .mini-flow{font-size:29px;color:var(--panel-accent,var(--panel-tag));margin-top:22px;border-top:1px solid var(--line);padding-top:20px;line-height:1.7;font-weight:600}
+.lead-person{background:var(--cta);color:var(--cta-fg);border:1px solid var(--cta-border)}
+.lead-person .identity,.lead-person p,.lead-person h3{color:var(--cta-soft)}
+
+/* 收获 / 人群 */
+.gain{display:flex;gap:25px;padding:27px 0;border-bottom:1px solid var(--line)}
+.gain:first-of-type{padding-top:5px}
+.gain:last-child{border:0}
+.gain .num{font-family:Arial;font-size:46px;font-weight:700;color:var(--accent);padding-top:1px;min-width:63px}
+.gain h3{font-size:35px;line-height:1.4;margin-bottom:10px}
+.gain p{font-size:30px;line-height:1.6}
+.audience{display:flex;gap:22px;padding:28px 29px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-sm);margin-bottom:17px;color:var(--card-fg)}
+.audience .star{font-size:31px;color:var(--accent-2)}
+.audience h3{font-size:34px;margin-bottom:9px}
+.audience p{font-size:29px;line-height:1.6;color:var(--card-fg)}
+
+/* 行动区：价格、二维码、须知 */
+.action{padding-bottom:68px}
+.actioncard{padding:41px;border-radius:30px;background:var(--cta);border:1px solid var(--cta-border);color:var(--cta-fg)}
+.actioncard p{color:var(--cta-soft)}
+.actiontop{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:25px}
+.price{font-family:Arial;font-size:98px;font-weight:700;line-height:1.1}
+.price small{font-size:44px;margin-right:10px}
+.price span{font-size:30px;font-family:var(--font-body);font-weight:500;margin-left:10px}
+.quota{font-size:30px;color:var(--cta-soft);border:1px solid var(--cta-border);border-radius:40px;padding:10px 20px}
+.details{margin-top:25px}
+.detail{display:flex;gap:20px;margin:15px 0;font-size:31px;line-height:1.65}
+.detail label{min-width:68px;color:var(--cta-soft)}
+.detail strong{font-weight:600;color:var(--cta-fg)}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:27px;margin-top:31px}
+.qrbox{background:#fff;border-radius:20px;padding:23px;text-align:center;color:#28243d}
+.qrframe{height:333px;display:flex;align-items:center;justify-content:center}
+.qrframe img{max-height:100%;width:100%;object-fit:contain}
+.qrbox h3{font-size:27px;margin-top:13px;color:#28243d}
+.steps{margin-top:27px;font-size:29px;line-height:1.7;color:var(--cta-soft)}
+.terms{margin-top:23px;font-size:25px;line-height:1.75;color:var(--cta-soft);border-top:1px solid var(--line);padding-top:21px}
+.footer{text-align:center;padding:17px 0 60px;color:var(--fg-muted);font-size:24px;letter-spacing:5px}
+.footer b{display:block;font-size:39px;letter-spacing:2px;color:var(--fg);margin-bottom:18px}
+</style>
+</head>
+<body>
+<main id="poster">
+<header class="hero" id="cover"><div class="brand"><b>活动海报示例</b><span class="edition">EVENT</span></div><div class="eyebrow">活动宣传海报 · 主题可替换示例</div><h1 class="grad">看清变化</h1><h2>把想法推进为行动</h2><p class="sub">用真实活动文案替换示例内容</p><div class="hero-bottom"><div class="hostline">这一模板展示标题层级、卡片和长图结构</div><div class="pills"><span class="pill">活动主题</span><span class="pill">核心亮点</span><span class="pill">现场交流</span></div></div></header>
+<section id="overview" class="intro"><div class="section-title"><h2>这场活动解决什么问题</h2><span class="line"></span></div><h2>从关键问题出发<br><span class="grad">走向可执行的下一步</span></h2><p>根据原始文案提炼活动主张、适用范围和参与收获。课程、发布会、招募、促销都可以用这一区块承载核心主张。</p></section>
+<section id="highlights"><div class="section-title"><h2>活动亮点</h2><span class="line"></span></div><article class="highlight" id="highlight-a"><div class="highlight-head"><b class="grad">亮点一</b><span>要点示例</span></div><h3>内容、流程与收获</h3><p>把真实活动内容整理成简短、可读的信息块：课程写主题与议程，发布会写产品亮点，促销写权益与价格，招募写岗位与要求。</p><div class="bullets"><div>问题：参与者当前需要解决什么？</div><div>内容：活动将提供什么理解、产品或权益？</div><div>依据：哪些真实信息可以支持这些内容？</div></div></article></section>
+<section id="people"><div class="section-title"><h2>主讲与嘉宾</h2><span class="line"></span></div><article class="person" data-person="person-a"><div class="person-name"><b>人物介绍示例</b><span>身份</span></div><p>这里使用用户提供的姓名、身份、照片与分享主题。可以是讲师、嘉宾、创始人、主理人或团队；照片未提供时使用文字卡片，活动没有人物时删除整个区块。</p></article></section>
+<section id="audience"><div class="section-title"><h2>适合谁参加</h2><span class="line"></span></div><div class="audience"><span class="star">✦</span><div><h3>活动面向的真实人群</h3><p>结合文案说明参与者的需求与当前阶段。</p></div></div></section>
+<section class="action" id="action"><div class="section-title"><h2>报名与参与</h2><span class="line"></span></div><div class="actioncard"><h3 style="font-size:40px">使用实际活动信息</h3><p style="margin-top:20px">日期、时间、地点、费用、名额、截止时间与联系方式以用户提供的文案为准。需要二维码时插入对应原图，并保留报名或购买须知。</p></div></section>
+</main>
+</body>
+</html>

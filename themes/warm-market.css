@@ -1,0 +1,37 @@
+/* theme: warm-market | 暖色市集
+   mood: 奶油底、橙绿撞色、手作感
+   fit: 市集、亲子活动、餐饮促销、社区活动、周末工作坊
+   backdrop: dots
+   用法: python3 scripts/setup.py --theme warm-market --backdrop <底图或 none> --out work/poster.html */
+:root{
+  --bg:#fff3e0;
+  --bg-glow-1:#ffd9a888;
+  --bg-glow-2:#cfe9d688;
+  --fg:#2b1d12;
+  --fg-soft:#5c4634;
+  --fg-muted:#8b7362;
+  --accent:#f26b1d;
+  --accent-2:#f5a04a;
+  --accent-3:#2e7d5b;
+  --line:#2b1d1226;
+  --card:#ffffff;
+  --card-2:#ffe9cc;
+  --card-border:#f26b1d33;
+  --card-fg:#3d2a1a;
+  --panel:#2e7d5b;
+  --panel-2:#1f5d43;
+  --panel-fg:#ffffff;
+  --panel-muted:#d6f0e2;
+  --panel-tag:#f26b1d;
+  --cta:linear-gradient(130deg,#f26b1d,#f5a04a);
+  --cta-border:#f26b1d;
+  --cta-fg:#ffffff;
+  --cta-soft:#fff1e2;
+  --radius:32px;
+  --radius-sm:22px;
+  --font-display:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --font-body:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --hero:none;
+  --hero-size:100% 100%;
+  --hero-fade:linear-gradient(0deg,var(--bg) 0%,transparent 24%);
+}
